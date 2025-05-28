@@ -131,61 +131,61 @@ local function getInput()
 	return char
 end
 
-map("n", "\\<F2>", function()
-	local char = getInput()
+-- map("n", "\\<F2>", function()
+-- 	local char = getInput()
+--
+-- 	if char then
+-- 		vim.api.nvim_command('exe "normal! ciw' .. char .. char .. '\\<Esc>P"')
+-- 	else
+-- 		print("No input captured")
+-- 	end
+-- end, { desc = "wrap/surround word in something" })
 
-	if char then
-		vim.api.nvim_command('exe "normal! ciw' .. char .. char .. '\\<Esc>P"')
-	else
-		print("No input captured")
-	end
-end, { desc = "wrap/surround word in something" })
+-- map("v", "\\<F2>", function()
+-- 	local char = getInput()
+--
+-- 	if char then
+-- 		vim.api.nvim_command('exe "normal! c' .. char .. char .. '\\<Esc>P"')
+-- 	else
+-- 		print("No input captured")
+-- 	end
+-- end, { desc = "wrap/surround selected in something" })
 
-map("v", "\\<F2>", function()
-	local char = getInput()
+-- map("n", "<Leader>\\<F2>", function()
+-- 	local function evaluateBracket(str)
+-- 		local brackets = { "()", "{}", "[]", "<>" }
+-- 		for _, v in ipairs(brackets) do
+-- 			if string.sub(v, 1, 1) == str then
+-- 				return true, v
+-- 			end
+-- 		end
+-- 		return false, str
+-- 	end
+--
+-- 	local char = getInput()
+--
+-- 	if char then
+-- 		local newChar = getInput()
+-- 		vim.api.nvim_command('exe "normal! di' .. char .. '"')
+-- 		if newChar then
+-- 			local isBracket, bracket = evaluateBracket(newChar)
+--
+-- 			if isBracket then
+-- 				vim.api.nvim_command('exe "normal! va' .. char .. '\\"_c' .. bracket .. '\\<esc>P"')
+-- 			else
+-- 				vim.api.nvim_command('exe "normal! va' .. char .. '\\"_c' .. newChar .. newChar .. '\\<esc>P"')
+-- 			end
+-- 		end
+-- 	else
+-- 		print("No input captured")
+-- 	end
+-- end, { desc = "delete wrap around and wrap inside something else" })
 
-	if char then
-		vim.api.nvim_command('exe "normal! c' .. char .. char .. '\\<Esc>P"')
-	else
-		print("No input captured")
-	end
-end, { desc = "wrap/surround selected in something" })
-
-map("n", "<Leader>\\<F2>", function()
-	local function evaluateBracket(str)
-		local brackets = { "()", "{}", "[]", "<>" }
-		for _, v in ipairs(brackets) do
-			if string.sub(v, 1, 1) == str then
-				return true, v
-			end
-		end
-		return false, str
-	end
-
-	local char = getInput()
-
-	if char then
-		local newChar = getInput()
-		vim.api.nvim_command('exe "normal! di' .. char .. '"')
-		if newChar then
-			local isBracket, bracket = evaluateBracket(newChar)
-
-			if isBracket then
-				vim.api.nvim_command('exe "normal! va' .. char .. '\\"_c' .. bracket .. '\\<esc>P"')
-			else
-				vim.api.nvim_command('exe "normal! va' .. char .. '\\"_c' .. newChar .. newChar .. '\\<esc>P"')
-			end
-		end
-	else
-		print("No input captured")
-	end
-end, { desc = "delete wrap around and wrap inside something else" })
-
-map("n", "<leader>\\\\", function()
-	local char = getInput()
-	vim.api.nvim_command('exe "normal! di' .. char .. '"')
-	vim.api.nvim_command('exe "normal! va' .. char .. '\\"_d' .. 'p"')
-end, { desc = "Remove sorrounding characters" })
+-- map("n", "<leader>\\\\", function()
+-- 	local char = getInput()
+-- 	vim.api.nvim_command('exe "normal! di' .. char .. '"')
+-- 	vim.api.nvim_command('exe "normal! va' .. char .. '\\"_d' .. 'p"')
+-- end, { desc = "Remove sorrounding characters" })
 
 map("n", "<leader>uP", "<cmd>CreatePrettierRC<CR>", { desc = "Creates a .prettierrc file" })
 
