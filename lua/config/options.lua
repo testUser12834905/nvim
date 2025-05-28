@@ -21,6 +21,8 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.clipboard = ""
 
+vim.opt.relativenumber = false
+
 vim.opt.scrolloff = 5
 vim.g.VM_theme = "paper"
 
@@ -28,3 +30,4 @@ vim.opt.conceallevel = 0
 
 vim.g.snacks_animate = false
 vim.g.ai_cmp = false
+vim.g.lazyvim_cmp = "nvim-cmp"
