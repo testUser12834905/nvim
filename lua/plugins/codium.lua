@@ -18,9 +18,9 @@ return {
 			})
 
 			vim.keymap.set("i", "<Tab>", neocodeium.accept_line)
+			vim.keymap.set("i", "<C-Tab>", neocodeium.accept)
 			vim.keymap.set("i", "<S-Tab>", neocodeium.cycle_or_complete)
 			vim.keymap.set("i", "<C-j>", neocodeium.accept_word)
-			-- vim.keymap.set("i", "<C-J>", neocodeium.accept_line)
 		end,
 	},
 }
