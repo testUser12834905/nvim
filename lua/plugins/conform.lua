@@ -21,7 +21,7 @@ return {
 			python = { "autopep8" },
 			fish = { "fish_indent" },
 			sh = { "shfmt" },
-			go = { "gofumpt", "gofmt", stop_after_first = true },
+			go = { "gofumpt", "goimports-reviser", "goimports" },
 			javascript = {
 				"prettierd",
 				"prettier",
