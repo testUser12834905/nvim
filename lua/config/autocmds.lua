@@ -42,49 +42,5 @@ local function formatNotTelescope()
 	end
 end
 
-local function cd()
-	require("neo-tree.command").execute({ action = "close" })
-	local current_folder = vim.fn.expand("%:p:h")
-	require("oil").open(current_folder)
-end
-
-_G.IsPresentate = false
-
-local function PresentationToggle()
-	IsPresentate = not IsPresentate
-	local font
-	local animation_len
-	local relativenumber
-
-	if IsPresentate then
-		font = "JetBrainsMonoNL Nerd Font Mono:h16"
-		animation_len = 0.5
-		relativenumber = false
-	else
-		font = "JetBrainsMono Nerd Font Mono:h16"
-		animation_len = 0.0
-		relativenumber = true
-	end
-
-	vim.o.guifont = font
-	vim.g.neovide_scroll_animation_length = animation_len
-	vim.opt.relativenumber = relativenumber
-end
-
 vim.api.nvim_create_user_command("CreatePrettierRC", create_prettierrc, {})
 vim.api.nvim_create_user_command("FormatIfNotTelescopeBuffer", formatNotTelescope, {})
-vim.api.nvim_create_user_command("Cd", cd, {})
-vim.api.nvim_create_user_command("PresentationToggle", PresentationToggle, {})
-
--- on insert leave
--- vim.api.nvim_create_autocmd("InsertLeave", {
--- 	callback = function()
--- 		LazyVim.toggle.inlay_hints.set(false)
--- 	end,
--- })
---
--- vim.api.nvim_create_autocmd("InsertEnter", {
--- 	callback = function()
--- 		LazyVim.toggle.inlay_hints.set(true)
--- 	end,
--- })
