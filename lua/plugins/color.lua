@@ -135,6 +135,28 @@ return {
 					-- Lsp
 					LspInlayHint = { bg = colors.surface0, fg = colors.overlay1, style = { "italic" } },
 					SupermavenSuggestion = { fg = "#7b818a" },
+
+					-- React tag jsx
+					["@tag.builtin.javascript"] = { fg = colors.pink },
+					["@tag.javascript"] = { fg = colors.pink },
+					["@tag.attribute.javascript"] = { fg = colors.teal },
+					["@tag.delimiter.javascript"] = { fg = colors.sky },
+
+					-- React tag tsx
+					["@tag.builtin.tsx"] = { fg = colors.pink },
+					["@tag.tsx"] = { fg = colors.pink },
+					["@tag.attribute.tsx"] = { fg = colors.teal },
+					["@tag.delimiter.tsx"] = { fg = colors.sky },
+
+					-- Export
+					["@keyword.export.typescript"] = { fg = colors.sky },
+					["@keyword.export.tsx"] = { fg = colors.sky },
+
+					["@type.builtin.typescript"] = { fg = colors.maroon },
+					["@type.builtin.tsx"] = { fg = colors.maroon },
+
+					["@lsp.type.parameter.typescriptreact"] = { fg = colors.text },
+					["@lsp.typemod.parameter.declaration.typescriptreact"] = { fg = colors.maroon },
 				}
 			end,
 		},

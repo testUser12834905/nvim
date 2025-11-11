@@ -4,6 +4,10 @@ return {
 		"monkoose/neocodeium",
 		event = "VeryLazy",
 		config = function()
+			if os.getenv("USER") == "hu901184" then
+				return
+			end
+
 			local neocodeium = require("neocodeium")
 			neocodeium.setup({
 				show_label = false,
