@@ -63,7 +63,7 @@ map("n", "X", "viwp", { desc = "Replace the current word with content from regul
 map("v", "x", '"_x', { desc = "x into '_' buffer" })
 
 -- Word search
-map("n", "<leader>ff", "<cmd>GrugFar<cr>", { desc = "Search globally" })
+map("n", "<leader>F", "<cmd>GrugFar<cr>", { desc = "Search globally", remap = true })
 
 -- Format
 map("n", "<F4>", "<cmd>LazyFormat<CR>", { desc = "Format document" })
