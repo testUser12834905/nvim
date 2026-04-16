@@ -1,16 +1,7 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.blink",
-    "lazyvim.plugins.extras.coding.nvim-cmp",
-    "lazyvim.plugins.extras.lang.go",
-    "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.tailwind",
-    "lazyvim.plugins.extras.lang.toml",
-    "lazyvim.plugins.extras.lang.typescript",
-    "lazyvim.plugins.extras.ui.mini-indentscope",
-    "lazyvim.plugins.extras.ui.treesitter-context"
+    "lazyvim.plugins.extras.linting.eslint"
   ],
-  "install_version": 7,
   "news": {
     "NEWS.md": "11866"
   },
